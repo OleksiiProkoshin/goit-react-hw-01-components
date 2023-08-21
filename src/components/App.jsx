@@ -1,4 +1,8 @@
+import { FriendsList } from './FriendList';
 import { Profile } from './Profile';
+import { Statistics } from './Statistics';
+import { TransactionHistory } from './TransactionHistory';
+import user from '../user.json'
 
 export const App = () => {
   return (
@@ -12,7 +16,16 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      <Profile />
+        <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics />
+      <FriendsList />
+      <TransactionHistory />
     </div>
   );
 };
