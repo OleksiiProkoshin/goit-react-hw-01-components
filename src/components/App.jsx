@@ -3,6 +3,7 @@ import { Profile } from './Profile';
 import { Statistics } from './Statistics';
 import { TransactionHistory } from './TransactionHistory';
 import user from '../user.json'
+import data from '../data.json'
 
 export const App = () => {
   return (
@@ -23,7 +24,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics />
+      <Statistics items = {data} />
       <FriendsList />
       <TransactionHistory />
     </div>
