@@ -1,11 +1,12 @@
 import {FriendListItem} from './FriendListItem'
+import {List} from './FriendsList.styled'
 
 export const FriendsList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <List className="friend-list">
       {friends.map(friend => (
         <FriendListItem key={friend.id} friend={friend} />
       ))}
-    </ul>
+    </List>
   );
 };
